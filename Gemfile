@@ -42,6 +42,13 @@ gem "activeadmin", github: "gregbell/active_admin" # Until it's 1.0.0
 
 gem "devise"
 
+gem "active_model_serializers" # Makes it easy to serialize models for client-side use;
+                               # Describe which attributes & relationships should be serialized
+gem "grape" # Ruby framework for rapid API development
+gem "grape-active_model_serializers" # Provides a formatter for the Grape API DSL to emit objects serialized with AMS
+gem "grape-swagger-rails" # Swagger UI as Rails Engine for grape-swagger gem
+gem "rack-cors", require: "rack/cors" # Middleware that will make Rack-based apps CORS compatible
+
 group :development do
   gem "better_errors" # Provides a better error page for Rails & other Rack apps
   gem "meta_request" # Supporting gem for Rails Panel (Google Chrome ext for Rails dev)
